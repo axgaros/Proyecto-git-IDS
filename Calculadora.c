@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 int main() {
     int opcion;
@@ -25,3 +25,30 @@ int main() {
     printf("Ingrese el segundo numero: ");
     scanf("%f", &num2);
 
+    // 3. Procesar y escribir el resultado
+    switch (opcion) {
+        case 1:
+            resultado = num1 + num2;
+            printf("\nResultado: %.2f + %.2f = %.2f\n", num1, num2, resultado);
+            break;
+        case 2:
+            resultado = num1 - num2;
+            printf("\nResultado: %.2f - %.2f = %.2f\n", num1, num2, resultado);
+            break;
+        case 3:
+            resultado = num1 * num2;
+            printf("\nResultado: %.2f * %.2f = %.2f\n", num1, num2, resultado);
+            break;
+        case 4:
+            // Validación para evitar la división por cero
+            if (num2 != 0) {
+                resultado = num1 / num2;
+                printf("\nResultado: %.2f / %.2f = %.2f\n", num1, num2, resultado);
+            } else {
+                printf("\nError: No se puede dividir entre cero.\n");
+            }
+            break;
+    }
+
+    return 0;
+}
