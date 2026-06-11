@@ -12,4 +12,16 @@ int main() {
     printf("4. Dividir\n");
     printf("Seleccione una operacion (1-4): ");
     scanf("%d", &opcion);
-    
+
+    // Validación de opción de menú
+    if (opcion < 1 || opcion > 4) {
+        printf("Error: Operacion no valida.\n");
+        return 0;
+    }
+
+    // 2. Pedir los números
+    printf("Ingrese el primer numero: ");
+    scanf("%f", &num1);
+    printf("Ingrese el segundo numero: ");
+    scanf("%f", &num2);
+
