@@ -33,12 +33,37 @@ float realizarOperacion(float numero1, float numero2, int opcion) {
                 return 0;
             }
 
-
-
-
-
-
-
-
-    
+        default:
+            printf("Opcion invalida.\n");
+            return 0;
+    }
 }
+
+int main() {
+    /* Buena práctica 3: Nombres descriptivos */
+    float numero1, numero2, resultado;
+    int opcion;
+
+    /* Buena práctica 4: Mensajes claros para el usuario */
+    printf("=== CALCULADORA ===\n");
+    printf("1. Suma\n");
+    printf("2. Resta\n");
+    printf("3. Multiplicacion\n");
+    printf("4. Division\n");
+    printf("Seleccione una opcion: ");
+    scanf("%d", &opcion);
+
+    printf("Ingrese el primer numero: ");
+    scanf("%f", &numero1);
+
+    printf("Ingrese el segundo numero: ");
+    scanf("%f", &numero2);
+
+    /* Buena práctica 5: Reutilización de código */
+    resultado = realizarOperacion(numero1, numero2, opcion);
+
+    printf("Resultado = %.2f\n", resultado);
+
+    return 0;
+}
+
